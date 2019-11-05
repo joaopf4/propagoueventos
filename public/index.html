@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Testes Widget Sympla</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.2.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.2.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.2.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <style media="screen">
+      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+      header { display: flex; align-items: center; justify-content: space-around; }
+      #message { text-align: center; background: white; max-width: 80%; margin: 0px auto 16px; padding: 32px 24px; border-radius: 3px; }
+      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; }
+      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); }
+      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
+      #message a { display: block; text-align: center; padding: 16px; border-radius: 4px; }
+      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+      img { vertical-align: middle; width: 100%; }
+      .titulo { margin: 30px 0 0 16px; }
+      .widget { text-align: center; background-color: #000000; text-align: right; justify-content: center; }
+      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
+      .rodape { background-color: dimgrey; font-size: 10px; text-align: right; margin: 0 auto; }
+      @media (max-width: 600px) {
+        body, #message { margin-top: 0; background: white; box-shadow: none; }
+        body { border-top: 16px solid #ffa100; }
+      }
+    </style>
+  </head>
+  <body>
+      
+      <div id="message">
+          <img alt="Marketing e Cerveja" src="versão_foto.jpg">
+          <h2 class="titulo">TALK: Marketing e Cerveja</h2>
+          <p>Adicionar um grid de ingresso para que a pessoa inicie a compra pelo site</p>
+          <div id="widget" class="justify-content-center">
+            <div id="sympla-widget-706007" height="auto"></div> 
+            <script src="https://www.sympla.com.br/js/sympla.widget-pt.js/706007"></script>
+          </div> 
+        </div>
+        <footer class="rodape">
+            Criado por &copy; Grupo Propagou Eventos
+        </footer>
+  </body>
+</html>
