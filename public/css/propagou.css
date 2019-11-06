@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,800|Raleway:200,400,900&display=swap');
+/*
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+*/
+body {
+
+    --cor_01_primaria:  #053D4E; /*Azul*/
+
+    --cor_02_primaria:  #F04E23; /*laranja*/
+
+    --cor_03_primaria:  #4D4D4D; /*Tons preto*/
+    --cor_03_media:     #8B8A8A;
+    --cor_03_clara:     #FCFCFC;
+
+    --cor_tratamento_foto:      #033A59;
+
+    --grid_coluna_celular: repeat(4, 1fr);
+    --grid-coluna_tablet: repeat(12, 1fr);
+}
+
+body{ font-family: 'Open Sans', sans-serif; font-size: 1.3em; line-height: 1.5em; font-weight: 300;}
+
+#abertura, #apresentacao, #destaque, #speakears, #informacoes {
+        display: grid;
+        grid-template-columns: var(--grid_coluna_celular);
+        grid-gap: 20px;
+        padding: 0 20px;
+}
+
+/*inicio da secao abertura */
+#abertura { 
+    grid-template-rows: repeat(4, 1fr);
+    width: 100%; height: 100vh; background: url(../img/bg_abertura_desktop.png) no-repeat; background-size: cover; background-position: center; position: relative;     
+}
+#abertura::before { content: "";height: 100vh;width: 100%;position: absolute;bottom: 0;left: 0;background: linear-gradient(360deg, #F04E23 14.67%, rgba(240, 78, 35, 0.7) 33.47%, rgba(245, 139, 26, 0.5) 48.76%, rgba(255, 255, 255, 0) 70.66%); mix-blend-mode: normal;z-index: 1;}
+
+#abertura > .logo_topo  {
+    width: 100%;
+    height: 60px;
+    background: url(../img/svg/logo_propagou_azul.svg) no-repeat;
+    background-size: contain; background-position: center;
+    grid-column: 1 / 5;
+    grid-row: 1 / 2;
+}
+#abertura > h2 {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 40px;
+    color: var(--cor_03_clara);
+    grid-column: 1 / 5;
+    grid-row: 3 / 4;
+}
+    #abertura > h2 > strong{ font-family: Raleway; font-style: normal; font-weight: 900; font-size: 60px; line-height: 70px;}
+
+.saiba_mais {
+    grid-column: 2 / 5;
+    grid-row: 4 / 5;
+    position: relative;
+    z-index: 1;
+    /*
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;*/
+}
+
+.saiba_mais a { font-family: Raleway; font-style: normal; font-weight: 900; color: var(--cor_03_clara); }
+
+/*inicio da secao apresentacao*/
+#apresentacao{
+    background: var(--cor_02_primaria);
+    grid-row: auto-row;
+    padding-bottom: 50px;
+}
+#apresentacao > p{
+    color: var(--cor_03_clara);
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+
+/*inicio da secao destaque */
+#destaque {
+    grid-row: auto-row;
+}
+#destaque > p {
+    color: var(--cor_01_primaria);
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+    font-family: Raleway;
+    font-weight: 900;
+    font-size: 24px;
+    padding: 50px 0;
+}
+
+/*inicio da secao speakears*/
+
+#speakears { grid-row: auto-row; }
+
+#speakears > h2 {
+    font-family: Raleway; font-weight: 300; font-size: 40px;
+    color: var(--cor_02_primaria);
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row: 1 / 6;
+    overflow: hidden;
+    position: relative;
+}
+#speakears > h2 > em {
+    position: absolute;
+    transform: translateX(40px) rotate(90deg);
+    transform-origin: top left; 
+}
+
+#speakears > .speakear_01 {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+#speakears > .speakear_02 {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+}
+#speakears > .speakear_03 {
+    grid-column: 2 / 5;
+    grid-row: 3 / 4;
+}
+#speakears > .convite {
+    grid-column: 2 / 5;
+    grid-row: 4 / 6;
+}
+
+div[class^="speakear"] > h3 {
+    color: var(--cor_02_primaria); font-family: Raleway; font-style: normal; font-weight: 900; padding-bottom: 10px;
+}
+/* inicio da secao informacoes */
+#informacoes {padding: 50px 20px;}
+
+#informacoes > h2 {
+    font-family: Raleway; font-weight: 300; font-size: 40px;
+    color: var(--cor_02_primaria);
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    overflow: hidden;
+    position: relative;
+}
+
+#informacoes > h2 > em {
+    position: absolute;
+    transform: translateX(40px) rotate(90deg);
+    transform-origin: top left; 
+}
+#info {
+    grid-column: 2 / 5;
+    grid-row: 1 / 2;
+}
+#info > p {
+padding-bottom: 20px;
+}
+#logo_cervejeiro {
+    grid-column: 2 / 5;
+    grid-row: 2 / 3;
+    width: 100%;
+    height: 150px
+}
+
+#logo_cervejeiro > img {
+    object-fit: contain;
+    object-position: center; 
+    width: 100%;
+    height: 100%;
+}
+
+
+#sympla_api {
+    min-height: 100vh;
+    background: var(--cor_01_primaria);
+    padding: 2% 25% 0% 25%;
+}
+
+
+
+
+footer { 
+    width: 100%;
+    height: 70px;
+    background: var(--cor_02_primaria);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer a{
+    width: 150px;
+    height: 90%;
+    background: url(img\svg\logo_propagou_branca.svg) no-repeat; 
+    background-size: contain; 
+    background-position: center;
+}
+
+/*efeito imagem */
+.conteiner_imagem {
+    position: relative;
+    width: 100%;
+    height: 195px;
+    overflow: hidden;
+}
+.conteiner_imagem::before{ content: " "; position: absolute;  width: 100%; height: 100%; left: 0; top: 0; opacity: 1;
+    mix-blend-mode: color;
+    z-index: 1;
+    background:  var(--cor_tratamento_foto);
+}
+.conteiner_imagem img {
+    filter: brightness( 110% ) contrast( 110% ) saturate( 0% ) blur( 0px ) hue-rotate( 0deg );
+    filter: grayscale(100%) brightness( 110% ) contrast( 110% );
+    object-fit: cover;
+    object-position: center; 
+    width: 100%;
+    height: 100%;
+}

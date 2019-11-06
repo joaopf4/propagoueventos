@@ -1,0 +1,25 @@
+.saiba-mais {
+    border: 1px solid var(--cor_02_primaria);
+    color: var(--cor_02_primaria);
+    border-radius: 10px;
+    width: 130px;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    text-align: center;
+
+    /* com as linhas abaixo vc determina a posição do elemento no grid*/
+    grid-column: 3 / 5; /*começa na coluna tres e termina na coluna 5 isso centraliza no grid.*/ 
+    grid-row: 4 /5; /* aqui a gente fala que ele começa na linha 4 e termina na 5*/
+    display: block; /*como estamos aplicando isso em um elemento de linha precisamos falar que ele é de bloco*/0
+    width: 100%; /* só definindo que é de bloco dá para colocar o tamanho assim */
+}
+
+.post {
+    display: grid;
+    grid-template-columns: var(--grid_coluna_celular);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    /*colocar essa linha pois os posts estão muito grudados.*/
+    margin-bottom: 30px;
+}
